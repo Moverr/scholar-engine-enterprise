@@ -11,7 +11,7 @@
 	<groupId>com.kodeinc</groupId>
 	<artifactId>configserver</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>configserver</name>
+	<name>scholar-configserver</name>
 	<description>Config Server</description>
 
 	<properties>
