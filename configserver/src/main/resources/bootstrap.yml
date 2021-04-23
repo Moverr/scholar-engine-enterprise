@@ -1,8 +1,8 @@
-#eureka: 
-#    client:
-#        serviceUrl:
-#            defaultZone: http://localhost:8010/eureka/
+eureka: 
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8010/eureka/
             
-#spring:
-#    application:
-#        name: CONFIG_SERVER
+spring:
+    application:
+        name: CONFIG_SERVER
