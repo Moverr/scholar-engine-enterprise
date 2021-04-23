@@ -19,6 +19,6 @@ public class HomeController {
     @ResponseBody
     @GetMapping("/") 
    public  String healthcheck() {
-        return "<html><body style='text-align:center;'> <h1> SCHOLAR ENTERPRISE CONFIG </h1> </body></html>";
+        return "home.html";
     }
 }
