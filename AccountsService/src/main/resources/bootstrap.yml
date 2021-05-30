@@ -1,0 +1,20 @@
+spring:
+    application:
+        name: ACCOUNTS_SERVICE
+    cloud:
+        config:
+            url:http://localhost:8001  
+
+eureka:
+    client:
+        serviceUrl:
+            defaultzone:http://localhost:8001/eureka/
+        
+        
+#        spring.cloud.config.uri=http://localhost:8001  
+#server.port=8002
+
+#eureka.client.serviceUrl.defaultZone: http://localhost:8001/eureka/spring.cloud.config.uri=http://localhost:8001  
+#server.port=8002
+
+#eureka.client.serviceUrl.defaultZone: http://localhost:8001/eureka/

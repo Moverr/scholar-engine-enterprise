@@ -7,7 +7,7 @@ package com.kodeinc.scholarenterprise.AccountsService.controllers.v1;
 
 /**
  *
- * @author muyin
+ * @author muyins
  */
 public class AccountController {
     
