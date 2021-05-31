@@ -5,6 +5,9 @@
  */
 package com.kodeinc.scholarenterprise.AccountsService.v1.controllers;
 
+import com.kodeinc.scholarenterprise.AccountsService.v1.controllers.requests.AccountRequest;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,7 +21,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class AccountController {
     
     //todo: Create Account
-    
+    @PostMapping
+    public void createAccount(@RequestBody AccountRequest request){
+        
+    }
     //todo: Login
      
     
