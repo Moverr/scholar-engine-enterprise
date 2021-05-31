@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class AccountController {
     
     //todo: Create Account
-    @PostMapping
+    @PostMapping("/register")
     public void createAccount(@RequestBody AccountRequest request){
         
     }
