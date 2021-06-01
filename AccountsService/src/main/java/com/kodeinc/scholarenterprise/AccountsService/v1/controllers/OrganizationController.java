@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.kodeinc.scholarenterprise.AccountsService.controllers.v1;
+package com.kodeinc.scholarenterprise.AccountsService.v1.controllers;
 
 /**
  *
- * @author muyins
+ * @author muyin
  */
-public class AccountController {
+public class OrganizationController {
     
 }
