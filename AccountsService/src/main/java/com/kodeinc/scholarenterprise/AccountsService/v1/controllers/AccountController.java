@@ -22,8 +22,8 @@ public class AccountController {
     
     //todo: Create Account
     @PostMapping("/register")
-    public void createAccount(@RequestBody AccountRequest request){
-        
+    public String createAccount(@RequestBody AccountRequest request){
+        return "Reached";
     }
     //todo: Login
      
