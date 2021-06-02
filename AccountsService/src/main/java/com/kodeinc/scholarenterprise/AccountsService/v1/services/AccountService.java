@@ -5,10 +5,16 @@
  */
 package com.kodeinc.scholarenterprise.AccountsService.v1.services;
 
+import org.springframework.stereotype.Service;
+
 /**
  *
  * @author muyin
  */
+@Service
 public class AccountService {
     
+    public void create(){
+        
+    }
 }
