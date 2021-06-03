@@ -5,6 +5,7 @@
  */
 package com.kodeinc.scholarenterprise.AccountsService.v1.dtos;
 
+import java.sql.Timestamp;
 import javax.validation.constraints.NotBlank;
 import org.springframework.data.annotation.Id;
 
@@ -13,17 +14,22 @@ import org.springframework.data.annotation.Id;
  * @author muyin
  */
 public class Account {
-    
+
     @Id
     private String id;
-    
-    
-      @NotBlank(message = "firstName name is mandatory")
+
+    @NotBlank(message = "firstName name is mandatory")
     public String firstName;
     @NotBlank(message = "lastName   is mandatory")
     public String lastName;
     @NotBlank(message = "email    is mandatory")
     public String email;
     
+    public long author_id;
+    public Timestamp date_created;
+    public Enum status;
     
+    
+    
+
 }
