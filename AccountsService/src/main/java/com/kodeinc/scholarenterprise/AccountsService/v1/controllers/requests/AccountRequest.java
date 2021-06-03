@@ -18,7 +18,7 @@ public class AccountRequest {
     public String firstName;
     @NotBlank(message = "lastName   is mandatory")
     public String lastName;
-    @NotBlank(message = "email name is mandatory")
+    @NotBlank(message = "email    is mandatory")
     public String email;
 
     public AccountRequest() {
