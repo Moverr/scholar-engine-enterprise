@@ -5,11 +5,18 @@
  */
 package com.kodeinc.scholarenterprise.AccountsService.v1.controllers.requests;
 
+ 
+import javax.validation.constraints.NotBlank;
+import org.w3c.dom.Entity;
+ 
+
 /**
  *
  * @author muyin
  */
+ 
 public class AccountRequest {
+    @NotBlank(message = "First name is mandatory")
     public String firstName;
     public String lastName;
     public String email;
@@ -45,6 +52,8 @@ public class AccountRequest {
     public String toString() {
         return "AccountRequest{" + "firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + '}';
     }
+    
+    
     
     
     

@@ -5,6 +5,7 @@
  */
 package com.kodeinc.scholarenterprise.AccountsService.v1.services;
 
+import com.kodeinc.scholarenterprise.AccountsService.v1.controllers.requests.AccountRequest;
 import org.springframework.stereotype.Service;
 
 /**
@@ -14,7 +15,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class AccountService {
     
-    public void create(){
+    public void create(AccountRequest accountRequest){
         
     }
 }

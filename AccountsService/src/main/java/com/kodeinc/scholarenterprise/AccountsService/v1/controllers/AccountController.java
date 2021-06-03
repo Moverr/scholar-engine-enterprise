@@ -7,6 +7,7 @@ package com.kodeinc.scholarenterprise.AccountsService.v1.controllers;
 
 import com.kodeinc.scholarenterprise.AccountsService.v1.controllers.requests.AccountRequest;
 import com.kodeinc.scholarenterprise.AccountsService.v1.services.AccountService;
+import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -30,8 +31,8 @@ public class AccountController {
 
     //todo: Create Account
     @PostMapping("/register")
-    public String createAccount(@RequestBody AccountRequest request) {
-        accountService.create();
+    public String createAccount( @Valid @RequestBody AccountRequest request) {
+        accountService.create(request);
         return "Reached";
     }
 
