@@ -9,6 +9,7 @@ import com.kodeinc.scholarenterprise.AccountsService.v1.controllers.requests.Acc
 import com.kodeinc.scholarenterprise.AccountsService.v1.dtos.Account;
 import java.sql.Date;
 import java.sql.Timestamp;
+import java.time.Instant;
 import org.springframework.stereotype.Service;
 
 /**
@@ -21,8 +22,10 @@ public class AccountService {
     public void create(AccountRequest accountRequest){
  
         //todo: populate entity 
+        Account account = populateEntity(accountRequest);
         
-        //todo: Log Request 
+        //todo: Log Transaction : 
+     
         //todo: save request to pending 
         
         //todo: Send an invitation email. and approval request url. 
@@ -38,8 +41,9 @@ public class AccountService {
         entity.email =  request.email;
         entity.firstName =  request.firstName;
         
-        entity.date_created = new Timestamp();
+        //todo: Date created 
+        entity.date_created =   Timestamp.from(Instant.now());
         
-        return null;
+        return entity;
     }
 }
