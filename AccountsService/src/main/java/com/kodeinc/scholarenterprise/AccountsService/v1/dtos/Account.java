@@ -101,10 +101,6 @@ public class Account {
         this.date_updated = date_updated;
     }
     
-    
-    
-    
-    
-    
+      
 
 }
