@@ -33,13 +33,15 @@ public class AccountService {
 
         //todo: populate entity 
         Account account = populateEntity(accountRequest);
-        account.setId(UUID.randomUUID().toString());
-
-        //todo: Log Transaction :
+        account.setId(UUID.randomUUID().toString()); 
         accountRepository.save(account);
-
-        //todo: save request to pending 
-        //todo: Send an invitation email. and approval request url. 
+        
+        //todo; populate Response 
+ 
+    }
+    
+    public void populateRespose(){
+        
     }
 
     public Account populateEntity(AccountRequest request) {
