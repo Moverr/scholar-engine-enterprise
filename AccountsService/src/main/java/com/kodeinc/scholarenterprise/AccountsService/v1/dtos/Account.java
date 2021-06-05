@@ -15,7 +15,6 @@ import org.springframework.data.annotation.Id;
  *
  * @author muyin
  */
- 
 public class Account {
 
     @Id
@@ -27,9 +26,9 @@ public class Account {
     public String lastName;
     @NotBlank(message = "email    is mandatory")
     public String email;
-    
+
     public long author_id;
-    
+
     public Timestamp date_created;
     public AccountStatus status;
     public Timestamp date_updated;
@@ -100,7 +99,5 @@ public class Account {
     public void setDate_updated(Timestamp date_updated) {
         this.date_updated = date_updated;
     }
-    
-      
 
 }

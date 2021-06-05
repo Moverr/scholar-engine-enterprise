@@ -11,6 +11,7 @@ import com.kodeinc.scholarenterprise.AccountsService.v1.repository.AccountReposi
 import java.sql.Date;
 import java.sql.Timestamp;
 import java.time.Instant;
+import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,41 +21,38 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class AccountService {
-    
+
     AccountRepository accountRepository;
-    
+
     @Autowired
     public AccountService(AccountRepository accountRepository) {
         this.accountRepository = accountRepository;
     }
-    
-    
-    public void create(AccountRequest accountRequest){
- 
+
+    public void create(AccountRequest accountRequest) {
+
         //todo: populate entity 
         Account account = populateEntity(accountRequest);
-        
-        //todo: Log Transaction : 
-     
+        account.setId(UUID.randomUUID().toString());
+
+        //todo: Log Transaction :
+        accountRepository.save(account);
+
         //todo: save request to pending 
-        
         //todo: Send an invitation email. and approval request url. 
-        
-     
     }
-    
-     
-    public Account populateEntity(AccountRequest request){
-        
+
+    public Account populateEntity(AccountRequest request) {
+
         Account entity = new Account();
-        entity.firstName =  request.firstName;
-        entity.lastName =  request.lastName;
-        entity.email =  request.email;
-        entity.firstName =  request.firstName;
-        
+        entity.firstName = request.firstName;
+        entity.lastName = request.lastName;
+        entity.email = request.email;
+        entity.firstName = request.firstName;
+
         //todo: Date created 
-        entity.date_created =   Timestamp.from(Instant.now());
-        
+        entity.date_created = Timestamp.from(Instant.now());
+
         return entity;
     }
 }
