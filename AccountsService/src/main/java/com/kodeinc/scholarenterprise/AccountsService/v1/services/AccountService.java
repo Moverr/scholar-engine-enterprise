@@ -17,5 +17,15 @@ public class AccountService {
     
     public void create(AccountRequest accountRequest){
         
+        //todo: validate Account 
+        
+        //todo: populate entity 
+        
+        //todo: Log Request 
+        //todo: save request to pending 
+        
+        //todo: Send an invitation email. and approval request url. 
+        
+     
     }
 }
