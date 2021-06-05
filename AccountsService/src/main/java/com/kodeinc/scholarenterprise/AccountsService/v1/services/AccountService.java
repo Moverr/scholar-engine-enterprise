@@ -6,6 +6,9 @@
 package com.kodeinc.scholarenterprise.AccountsService.v1.services;
 
 import com.kodeinc.scholarenterprise.AccountsService.v1.controllers.requests.AccountRequest;
+import com.kodeinc.scholarenterprise.AccountsService.v1.dtos.Account;
+import java.sql.Date;
+import java.sql.Timestamp;
 import org.springframework.stereotype.Service;
 
 /**
@@ -16,9 +19,7 @@ import org.springframework.stereotype.Service;
 public class AccountService {
     
     public void create(AccountRequest accountRequest){
-        
-        //todo: validate Account 
-        
+ 
         //todo: populate entity 
         
         //todo: Log Request 
@@ -27,5 +28,18 @@ public class AccountService {
         //todo: Send an invitation email. and approval request url. 
         
      
+    }
+    
+    public Account populateEntity(AccountRequest request){
+        
+        Account entity = new Account();
+        entity.firstName =  request.firstName;
+        entity.lastName =  request.lastName;
+        entity.email =  request.email;
+        entity.firstName =  request.firstName;
+        
+        entity.date_created = new Timestamp();
+        
+        return null;
     }
 }
