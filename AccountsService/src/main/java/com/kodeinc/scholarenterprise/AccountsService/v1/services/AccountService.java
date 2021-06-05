@@ -7,9 +7,11 @@ package com.kodeinc.scholarenterprise.AccountsService.v1.services;
 
 import com.kodeinc.scholarenterprise.AccountsService.v1.controllers.requests.AccountRequest;
 import com.kodeinc.scholarenterprise.AccountsService.v1.dtos.Account;
+import com.kodeinc.scholarenterprise.AccountsService.v1.repository.AccountRepository;
 import java.sql.Date;
 import java.sql.Timestamp;
 import java.time.Instant;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -18,6 +20,14 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class AccountService {
+    
+    AccountRepository accountRepository;
+    
+    @Autowired
+    public AccountService(AccountRepository accountRepository) {
+        this.accountRepository = accountRepository;
+    }
+    
     
     public void create(AccountRequest accountRequest){
  
@@ -33,6 +43,7 @@ public class AccountService {
      
     }
     
+     
     public Account populateEntity(AccountRequest request){
         
         Account entity = new Account();
