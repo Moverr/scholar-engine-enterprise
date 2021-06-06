@@ -7,11 +7,13 @@ package com.kodeinc.scholarenterprise.AccountsService.v1.repository;
 
 import com.kodeinc.scholarenterprise.AccountsService.v1.dtos.Account;
 import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
 
 /**s
  *
  * @author muyin
  */
+@Repository
 public interface AccountRepository extends MongoRepository<Account,String>{
     
 }

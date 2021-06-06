@@ -10,7 +10,6 @@ import com.kodeinc.scholarenterprise.AccountsService.v1.controllers.responses.Ac
 import com.kodeinc.scholarenterprise.AccountsService.v1.dtos.Account;
 import com.kodeinc.scholarenterprise.AccountsService.v1.helpers.AccountStatus;
 import com.kodeinc.scholarenterprise.AccountsService.v1.repository.AccountRepository;
-import java.sql.Date;
 import java.sql.Timestamp;
 import java.time.Instant;
 import java.util.UUID;
@@ -23,13 +22,10 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class AccountService {
+@Autowired
+       AccountRepository accountRepository;
 
-    AccountRepository accountRepository;
-
-    @Autowired
-    public AccountService(AccountRepository accountRepository) {
-        this.accountRepository = accountRepository;
-    }
+  
 
     public AccountResponse create(AccountRequest accountRequest) {
 
