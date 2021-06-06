@@ -9,6 +9,6 @@ package com.kodeinc.scholarenterprise.AccountsService.v1.repository;
  *
  * @author muyin
  */
-public class AccountRepository {
+public interface AccountRepository extends MongoRepository<>{
     
 }
