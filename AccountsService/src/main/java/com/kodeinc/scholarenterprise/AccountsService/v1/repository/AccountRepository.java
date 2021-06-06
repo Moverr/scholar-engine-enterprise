@@ -5,10 +5,13 @@
  */
 package com.kodeinc.scholarenterprise.AccountsService.v1.repository;
 
-/**
+import com.kodeinc.scholarenterprise.AccountsService.v1.dtos.Account;
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+/**s
  *
  * @author muyin
  */
-public interface AccountRepository extends MongoRepository<>{
+public interface AccountRepository extends MongoRepository<Account,String>{
     
 }

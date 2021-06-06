@@ -6,7 +6,9 @@
 package com.kodeinc.scholarenterprise.AccountsService.v1.services;
 
 import com.kodeinc.scholarenterprise.AccountsService.v1.controllers.requests.AccountRequest;
+import com.kodeinc.scholarenterprise.AccountsService.v1.controllers.responses.AccountResponse;
 import com.kodeinc.scholarenterprise.AccountsService.v1.dtos.Account;
+import com.kodeinc.scholarenterprise.AccountsService.v1.helpers.AccountStatus;
 import com.kodeinc.scholarenterprise.AccountsService.v1.repository.AccountRepository;
 import java.sql.Date;
 import java.sql.Timestamp;
@@ -29,21 +31,34 @@ public class AccountService {
         this.accountRepository = accountRepository;
     }
 
-    public void create(AccountRequest accountRequest) {
+    public AccountResponse create(AccountRequest accountRequest) {
 
         //todo: populate entity 
         Account account = populateEntity(accountRequest);
         account.setId(UUID.randomUUID().toString()); 
-        accountRepository.save(account);
+        //Default to pending until approval status
+        account.status = AccountStatus.PENDING;
         
-        //todo; populate Response 
+        accountRepository.save(account); 
+        return populateRespose(account);
  
     }
     
-    public void populateRespose(){
-        
+    //todo: Response
+    public AccountResponse populateRespose(Account account){
+         AccountResponse response = new AccountResponse();
+         
+         response.setId(account.getId());
+         response.setEmail(account.getEmail());
+         response.setFirstName(account.getFirstName());
+         response.setLastName(account.getLastName());
+         response.setDate_created(account.getDate_created().getTime());
+         
+         return response;
+         
     }
 
+    //todo: Request
     public Account populateEntity(AccountRequest request) {
 
         Account entity = new Account();
